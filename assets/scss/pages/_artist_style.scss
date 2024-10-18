@@ -1,0 +1,56 @@
+.banner{
+    background-image: url(../../images/pic/title_back.jpg);
+    background-size: cover;
+    padding:16px 18px 16px 18px;
+    position: relative;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content:center;
+    >input{
+        border:0;
+        background-color:white;
+        color:black;
+        border-radius:10px;
+    }
+    .artistname{
+        padding:10% 40% 0% 10%;
+        display: flex;
+    }
+    .nember{
+        padding:10% 10% 10% 0%;
+    }
+}
+
+.avatar-object-fit{
+    border-radius: 50%;
+    overflow: hidden;
+    >img{
+        display: block;
+        width:100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+.featured-photo{
+    border-radius: 10%;
+    overflow: hidden;
+    >img{
+        display: block;
+        width:100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+.news-photo{
+    border-radius: 10%;
+    overflow: hidden;
+    >img{
+        display: block;
+        width:100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}

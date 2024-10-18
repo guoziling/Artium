@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../assets/scss/pages/_artist_style.scss">
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <div>
+      <div class="banner">
+        <div class="artistname">
+          <div class="avatar-object-fit">
+            <div class="avatar-frame">
+              <img src="../assets/images/avatar/avatar5.png" alt="big-hand" style="width:150px">
+           </div>
+          </div>
+          <p style="color:white">　Echelon　</p>
+          <input type="button" value="加關注" style="font-size:20px; width:100px; height: 50px;">
+        </div>
+        <div class="nember">
+          <p><span style="color:white">56作品數 ｜ 13已售出</span></p>
+        </div>
+
+      </div>
+      <div style="margin: 16px 20% 16px 20%;">
+        <div class="aboutour">
+          <img src="../assets/images/icon/fb.svg" alt="fb" style="width:30px">
+          <img src="../assets/images/icon/ins_line.svg" alt="ins" style="width:30px">
+          <img src="../assets/images/icon/twitter_line.svg" alt="tw" style="width:30px">
+          <p>專注於寫實主義風格，通過精湛的技法和敏銳的觀察力，展現出日常生活中細膩且真實的細節。其作品常以自然、人物與城市景象為題材，透過光影和色彩的巧妙運用，創造出具有強烈感染力的畫面。</p>
+        </div>
+        <div class="bookmark">
+          <a href="#featured">精選作品</a>
+          <a href="#news">最新情報</a>
+          <a href="#portfolio">作品集</a>
+        </div>
+        <div id="featured">
+          <h2>精選作品</h2>
+          <div style="display: flex;">
+            <div class="featured-photo">
+              <img src="../assets/images/product/product18.png" alt="#0034" style="width:200px">
+              <p>星空#0034</p>
+            </div>
+            <div class="featured-photo">
+              <img src="../assets/images/product/product11.png" alt="#0077" style="width:200px">
+            </div>
+            <div class="featured-photo">
+              <img src="../assets/images/product/product8.png" alt="#0039" style="width:400px">
+            </div>
+            <div class="featured-photo">
+              <img src="../assets/images/product/product10.png" alt="#0009" style="width:400px">    
+            </div>        
+          </div>
+        </div>
+        <div id="news">
+          <h2>最新情報</h2>
+          <div style="display: flex;">
+            <div class="news-photo">
+              <img src="../assets/images/new/new1.png" alt="new1" style="width:400px; height:200px;">
+            </div>
+            <div class="news-photo">
+              <img src="../assets/images/new/new2.png" alt="new2" style="width:400px; height:200px;">
+            </div>
+            <div class="news-photo">
+              <img src="../assets/images/new/new3.png" alt="new3" style="width:400px; height:200px;">
+            </div>        
+          </div>
+        </div>
+        <div id="portfolio">
+          <h2>作品集</h2>
+        </div>
+      </div>
+      
+    </div>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
