@@ -22,6 +22,10 @@
     }
 }
 
+.block{
+    padding:5% 0% 5% 0%;
+}
+
 .avatar-object-fit{
     border-radius: 50%;
     overflow: hidden;
@@ -45,12 +49,15 @@
 }
 
 .news-photo{
-    border-radius: 10%;
-    overflow: hidden;
+    border-radius: 20%;
+    position: relative;
+    overflow-x: auto;
     >img{
         display: block;
-        width:100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
+        max-height: 100%;  
+        max-width: 100%; 
+        width: auto;
+        height: auto;
+        margin: auto;
     }
 }
