@@ -8,6 +8,19 @@
   <title>index</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS Base ：Normalize：標準化不同瀏覽器間的預設樣式，使其更加一致。 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- 加載外部字體（Google Fonts） -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <!-- 加載外部 JavaScript（jQuery 和 GSAP） -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -102,11 +115,176 @@
     </div>
   </div>
 
+<!-- 第三區塊輪播 -->
+<div class="third-slideshow">
+  <section class="slideshow">
+    <!-- 切換按鈕 -->
+    <ul class="navigation">
+        <li class="navigation-item active">
+            <span class="background-holder img-1"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-2"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-3"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-4"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-5"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-6"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-7"></span>
+        </li>
+        <li class="navigation-item">
+            <span class="background-holder img-8"></span>
+        </li>
+    </ul>
+
+    <!-- 遮罩效果 -->
+    <div class="overlay"></div>
+
+    <!-- 背景樣式 -->
+    <div class="detail">
+      <div class="detail-item active">
+        <div class="headline">
+            <strong>Black Domino</strong><br> 
+            Good night #1004 
+        </div>
+        <p>此次這個作品的目標，是透過藝術表達自己內心深處，創造出不僅在視覺上令人驚嘆，而且令人難忘和愉快的東西。<br>設計原則是：保持簡單，視覺上令人難忘、吸引人，以及讓它變得有趣。</p>
+        <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+        <div class="background img-1"></div>
+      </div>
+      <div class="detail-item">
+        <div class="headline">
+            <strong>GUGU</strong><br> 
+            香菇朵朵農莊 #666 
+        </div>
+        <p>香菇朵朵農莊是 GUGU 製作的個人原創漫畫，希望透過故事為他人帶來鼓勵與希望之光。</p>
+        <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+        <div class="background img-2"></div>
+      </div>
+
+      <!-- 第三個內容 -->
+      <div class="detail-item">
+        <div class="headline">
+            <strong>Echelon</strong><br> 
+            Explore Yourself #112 
+        </div>
+        <p>製作超現實主義藝術和高級時尚設計。就像他的音樂一樣，目標始終是讓你微笑，讓你感受到一些東西。</p>
+        <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+        <div class="background img-3"></div>
+      </div>
+
+      <!-- 第四個內容 -->
+      <div class="detail-item">
+          <div class="headline">
+              <strong>Black Domino</strong><br> 
+              火燒稻草人 #44 
+          </div>
+          <p>這稻草人不過是個空殼，任我用火點燃，它也無法反駁。就像那些虛假的批評聲，再猛烈也只是在燒自己的空話，終將煙消雲散。</p>
+          <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+          <div class="background img-4"></div>
+      </div>
+
+      <!-- 第五個內容 -->
+      <div class="detail-item">
+          <div class="headline">
+              <strong>Crixtover Edwin</strong><br> 
+              無邊際 #903 
+          </div>
+          <p>在遙遠無邊的宇宙中，每一顆星星都是無盡故事的起點，閃爍著我們未曾踏足的夢與未知，無論多遠，總有一片光指引我們前行。</p>
+          <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+          <div class="background img-5"></div>
+      </div>
+
+      <!-- 第六個內容 -->
+      <div class="detail-item">
+          <div class="headline">
+              <strong>Tuukzs</strong><br> 
+              美好夢鄉 #0088 
+          </div>
+          <p>夜幕低垂，讓溫柔的星光編織一場無限溫暖的夢境，在美好的夢鄉裡，你將找到最純淨的安寧與幸福。</p>
+          <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+          <div class="background img-6"></div>
+      </div>
+
+      <!-- 第七個內容 -->
+      <div class="detail-item">
+          <div class="headline">
+              <strong>PFP</strong><br> 
+              兩倍的我 #0101 
+          </div>
+          <p>當我與複製人對視，彷彿看見了另一個自己。相似的軀體，卻懷抱著截然不同的靈魂。我們究竟是敵是友，還是命運的鏡像？</p>
+          <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+          <div class="background img-7"></div>
+      </div>
+
+      <!-- 第八個內容 -->
+      <div class="detail-item">
+          <div class="headline">
+              <strong>tuukzs</strong><br> 
+              告別 #5433 
+          </div>
+          <p>當靈魂輕盈地脫離肉體，仿若甩掉了塵世的重擔，自由地飄向無限的未知，探索另一個境界的真實。</p>
+          <a href="#" class="detail-button">了解詳情 <i class="bi bi-chevron-right"></i></a>
+          <div class="background img-8"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 第四區塊：藝術家推薦 -->
+<div class="art-style-section">
+  <div class="art-style-header">
+    <h2>探索你喜歡的藝術類型</h2>
+    <p>探索喜歡的藝術類型，發現不同的藝術作品</p>
+    <a href="#" class="explore-button">探索更多類別</a>
+  </div>
+  <div class="art-style-gallery">
+    <!-- 圖片 1 - 位於右上角 -->
+    <div class="art-style-item img-1">
+      <img src="../assets/images/product/product21.png" alt="超現實主義">
+      <p>超現實主義</p>
+    </div>
+    <!-- 圖片 2 - 位於圖片 1 的正下方，間隔 44px -->
+    <div class="art-style-item img-2">
+      <img src="../assets/images/product/product24.png" alt="抽象主義">
+      <p>抽象主義</p>
+    </div>
+    <!-- 圖片 3 - 位於圖片 1 的左側，間隔 24px 並與其頂部對齊 -->
+    <div class="art-style-item img-3">
+      <img src="../assets/images/product/product20.png" alt="寫實主義">
+      <p>寫實主義</p>
+    </div>
+    <!-- 圖片 4 - 位於圖片 3 的下方，對齊圖片 1 的右側 -->
+    <div class="art-style-item img-4">
+      <img src="../assets/images/product/product23.png" alt="表現主義">
+      <p>表現主義</p>
+    </div>
+    <!-- 圖片 5 - 位於圖片 4 的左側，並對齊圖片 4 的頂部 -->
+    <div class="art-style-item img-5">
+      <img src="../assets/images/product/product22.png" alt="後現代主義">
+      <p>後現代主義</p>
+    </div>
+  </div>
+</div>
 
 
-  <%- include('./layout/footer'); %>
 
-      <script type="module" src="../main.js"></script>
+
+
+
+
+<%- include('./layout/footer'); %>
+
+<script type="module" src="../main.js"></script>
+      
 </body>
 
 </html>

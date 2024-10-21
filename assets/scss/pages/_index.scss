@@ -18,6 +18,7 @@
 input[type="radio"] {
   display: none; 
 }
+
 /* 背景圖設定及模糊效果 */
 .hero-background {
   position: absolute;
@@ -117,7 +118,6 @@ input[type="radio"] {
   background-image: url('/assets/images/hero/hero5.png');
 }
 
-/* 當 radio 被選中時，變更對應的主圖片背景圖 */
 #art1:checked ~ .hero-background,
 #art1:checked ~ .hero-main-image {
   background-image: url('/assets/images/hero/hero1.png');
@@ -128,8 +128,6 @@ input[type="radio"] {
   content: none; /* 取消偽元素內容 */
   display: none; /* 隱藏偽元素 */
 }
-
-
 
 /* 第二區塊 */
 .marquee {
@@ -142,16 +140,13 @@ input[type="radio"] {
   display: block;
   width: 200%;
   height: 400px;
-
   position: absolute;
   overflow: hidden;
-
   animation: marquee 10s linear infinite;
 }
 
 .marquee span {
   float: left;
-/*   width: 50%; */
   font-size: 120px;
   white-space: nowrap;
 }
@@ -159,4 +154,313 @@ input[type="radio"] {
 @keyframes marquee {
   0% { left: 0; }
   100% { left: -100%; }
+}
+
+/* 第三區塊 - slideshow 區塊樣式 */
+/* 為了避免全局影響，將第三區塊命名與前面重複的地方做了調整 */
+.third-slideshow * {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.third-slideshow body,
+.third-slideshow html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.third-slideshow .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.third-slideshow .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%);
+    z-index: 5;
+}
+
+.third-slideshow .navigation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 150px;
+    z-index: 10;
+}
+
+.third-slideshow .navigation-item {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.third-slideshow .navigation-item:nth-child(1) { transform: rotate(40deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(2) { transform: rotate(40deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(3) { transform: rotate(80deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(4) { transform: rotate(120deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(5) { transform: rotate(160deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(6) { transform: rotate(200deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(7) { transform: rotate(240deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(8) { transform: rotate(280deg) translate(150px) rotate(0deg); }
+.third-slideshow .navigation-item:nth-child(9) { transform: rotate(320deg) translate(150px) rotate(0deg); }
+
+.third-slideshow .navigation-item.active {
+    border: 2px solid white;
+}
+
+.third-slideshow .background-holder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+.third-slideshow .detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.third-slideshow .detail-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.third-slideshow .detail-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.third-slideshow .headline {
+    position: absolute;
+    top: 40%; /* 調整文字位置到更合適的高度 */
+    left: 10%; /* 文字靠左對齊 */
+    transform: translate(0, -50%); /* 調整使文字保持垂直居中 */
+    font-size: 3em; /* 調整字體大小 */
+    font-weight: bold;
+    color: white; /* 白色文字 */
+    z-index: 99;
+}
+.third-slideshow .headline {
+    position: absolute;
+    top: 40%; /* 調整文字位置到更合適的高度 */
+    left: 10%; /* 文字靠左對齊 */
+    transform: translate(0, -50%); /* 調整使文字保持垂直居中 */
+    font-size: 1em; /* 調整字體大小 */
+    font-weight: bold;
+    color: white; /* 白色文字 */
+    z-index: 99;
+}
+
+.third-slideshow p {
+  position: absolute;
+  top: 55%; /* 段落文字位於標題之下 */
+  left: 10%; /* 左側對齊 */
+  width: 80%; /* 避免文字過寬，給左右空白 */
+  font-size: 1em; /* 調整字體大小 */
+  line-height: 1em; /* 行距調整，讓文字更易讀 */
+  color: white; /* 白色文字，與背景形成對比 */
+  z-index: 99;
+}
+
+.third-slideshow .headline strong {
+  font-size: 1em; /* Black Domino 的字體大小 */
+  font-weight: 700; /* 加粗字體 */
+  color: #f5f5f5; /* 顯示不同顏色 */
+}
+
+/* 了解詳情的按鈕樣式 */
+.third-slideshow .detail-button {
+  position: absolute;
+  top: 70%; /* 調整按鈕的位置，使其位於文字下方 */
+  left: 10%; /* 左側對齊 */
+  padding: 10px 20px; /* 按鈕內間距 */
+  background-color: transparent; /* 透明背景 */
+  border: 2px solid white; /* 白色邊框 */
+  border-radius: 5px; /* 圓角邊框 */
+  color: white; /* 白色文字 */
+  font-size: 1.2em; /* 調整字體大小 */
+  text-decoration: none; /* 去掉預設的下劃線 */
+  cursor: pointer; /* 鼠標移到按鈕上變為手形 */
+  transition: all 0.3s ease; /* 動畫效果 */
+  z-index: 99;
+}
+
+.third-slideshow .detail-button:hover {
+  background-color: white; /* 滑過時按鈕背景變為白色 */
+  color: black; /* 滑過時文字變為黑色 */
+}
+
+.third-slideshow .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.third-slideshow .img-1 { background-image: url('../assets/images/carousel/carousel1.png'); }
+.third-slideshow .img-2 { background-image: url('../assets/images/carousel/carousel2.png'); }
+.third-slideshow .img-3 { background-image: url('../assets/images/carousel/carousel3.png'); }
+.third-slideshow .img-4 { background-image: url('../assets/images/carousel/carousel4.png'); }
+.third-slideshow .img-5 { background-image: url('../assets/images/carousel/carousel5.png'); }
+.third-slideshow .img-6 { background-image: url('../assets/images/carousel/carousel6.png'); }
+.third-slideshow .img-7 { background-image: url('../assets/images/carousel/carousel7.png'); }
+.third-slideshow .img-8 { background-image: url('../assets/images/carousel/carousel8.png'); }
+.third-slideshow .img-9 { background-image: url('../assets/images/carousel/carousel9.png'); }
+
+
+
+/* 第四區塊 */
+.art-style-section {
+  height: 800px;
+  padding: 50px;
+  background-color: #fff;
+  position: relative;
+  background-image: url('../assets/images/picWall/bg_1.svg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* 防止圖片超出 */
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.art-style-header {
+  flex-basis: 40%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.art-style-header h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.art-style-header p {
+  font-size: 18px;
+}
+
+.art-style-header .explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* 圖片區塊 */
+.art-style-gallery {
+  position: relative;
+  flex-basis: 60%;
+  height: auto;
+  z-index: 1;
+}
+
+/* 圖片設置 */
+.art-style-item {
+  position: absolute;
+  overflow: hidden;
+}
+
+.art-style-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 預設文字在圖片底部 */
+.art-style-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1; /* 保證預設顯示 */
+}
+
+/* 當鼠標懸停時文字移到圖片中間 */
+.art-style-item:hover p {
+  bottom: 50%; /* 移到圖片中間 */
+  transform: translateY(50%);
+}
+
+/* 圖片 1 */
+.art-style-item.img-1 {
+  top: 0;
+  right: 0;
+  width: 221px;
+  height: 221px;
+  z-index: 1;
+}
+
+/* 圖片 2 */
+.art-style-item.img-2 {
+  top: calc(221px + 44px);
+  right: 0;
+  width: 221px;
+  height: 221px;
+  z-index: 1;
+}
+
+/* 圖片 3 */
+.art-style-item.img-3 {
+  top: 0;
+  right: calc(221px + 24px);
+  width: 401px;
+  height: 401px;
+  z-index: 1;
+}
+
+/* 圖片 4 */
+.art-style-item.img-4 {
+  top: calc(401px + 24px);
+  right: calc(221px + 24px);
+  width: 281px;
+  height: 281px;
+  z-index: 1;
+}
+
+/* 圖片 5 */
+.art-style-item.img-5 {
+  top: calc(401px + 24px);
+  right: calc(281px + 48px + 221px);
+  width: 214px;
+  height: 214px;
+  z-index: 1;
 }
