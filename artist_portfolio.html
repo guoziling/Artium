@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artist Portfolio</title>
     
-    <script type="module" crossorigin src="/Artium/assets/main-0b23d3ba.js"></script>
-    <link rel="stylesheet" href="/Artium/assets/main-3fbac31d.css">
-    <link rel="stylesheet" href="/Artium/assets/artist_portfolio-31ea3465.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="module" crossorigin src="/Artium/assets/main-c1246305.js"></script>
+    <link rel="stylesheet" href="/Artium/assets/main-604a8c85.css">
+    <link rel="stylesheet" href="/Artium/assets/artist_portfolio-b1d0963e.css">
   </head>
   <body>
     <head>
@@ -20,7 +21,7 @@
     <!-- 左側 Navigation 區域 -->
     <div class="container navigation">
       <div class="logo">
-        <img src="/Artium/assets/logo_desktop-f3c91a7f.svg" alt="ARTIUM logo" class="logo-image" />
+        <img src="/Artium/assets/logo_desktop-28759c21.svg" alt="ARTIUM logo" class="logo-image" />
       </div>
       <div class="main-nav">
         <ul>
@@ -52,6 +53,7 @@
     </div>
   </header>
   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div>
       <div class="banner">
         <div class="artistname">
@@ -70,50 +72,119 @@
       </div>
       <div style="margin: 16px 20% 16px 20%;">
         <div class="aboutour">
-          <img src="/Artium/assets/fb-50e47c93.svg" alt="fb" style="width:30px">
-          <img src="/Artium/assets/ins_line-b575bdb6.svg" alt="ins" style="width:30px">
-          <img src="/Artium/assets/twitter_line-7d743457.svg" alt="tw" style="width:30px">
-          <p>專注於寫實主義風格，通過精湛的技法和敏銳的觀察力，展現出日常生活中細膩且真實的細節。其作品常以自然、人物與城市景象為題材，透過光影和色彩的巧妙運用，創造出具有強烈感染力的畫面。</p>
+          <img src="/Artium/assets/fb-af5b630c.svg" alt="fb" style="width:30px">
+          <img src="/Artium/assets/ins_line-0e8fd9fb.svg" alt="ins" style="width:30px">
+          <img src="/Artium/assets/twitter_line-dd15a662.svg" alt="tw" style="width:30px">
+          <div class="block"><p>專注於寫實主義風格，通過精湛的技法和敏銳的觀察力，展現出日常生活中細膩且真實的細節。其作品常以自然、人物與城市景象為題材，透過光影和色彩的巧妙運用，創造出具有強烈感染力的畫面。</p></div>
         </div>
         <div class="bookmark">
           <a href="#featured">精選作品</a>
           <a href="#news">最新情報</a>
           <a href="#portfolio">作品集</a>
         </div>
-        <div id="featured">
-          <h2>精選作品</h2>
-          <div style="display: flex;">
-            <div class="featured-photo">
-              <img src="/Artium/assets/product18-a22c33ca.png" alt="#0034" style="width:200px">
-              <p>星空#0034</p>
-            </div>
-            <div class="featured-photo">
-              <img src="/Artium/assets/product11-3c1dca90.png" alt="#0077" style="width:200px">
-            </div>
-            <div class="featured-photo">
-              <img src="/Artium/assets/product8-f58ab3d6.png" alt="#0039" style="width:400px">
-            </div>
-            <div class="featured-photo">
-              <img src="/Artium/assets/product10-650f9c2c.png" alt="#0009" style="width:400px">    
-            </div>        
+        <div id="featured" class="block">
+            <h2>精選作品</h2>
+            <div style="display:flex; justify-content:space-around">
+              <div class="featured-photo">
+                <img src="/Artium/assets/product18-a22c33ca.png" alt="#0034" style="width:200px">
+                <p>星空#0034</p>
+              </div>
+              <div class="featured-photo">
+                <img src="/Artium/assets/product11-3c1dca90.png" alt="#0077" style="width:200px">
+              </div>
+              <div class="featured-photo">
+                <img src="/Artium/assets/product8-f58ab3d6.png" alt="#0039" style="width:400px">
+              </div>
+              <div class="featured-photo">
+                <img src="/Artium/assets/product10-650f9c2c.png" alt="#0009" style="width:400px">    
+              </div>        
           </div>
         </div>
-        <div id="news">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <h2>最新情報</h2>
-          <div style="display: flex;">
-            <div class="news-photo">
-              <img src="/Artium/assets/new1-b6ec00be.png" alt="new1" style="width:400px; height:200px;">
-            </div>
-            <div class="news-photo">
-              <img src="/Artium/assets/new2-4d2a2c04.png" alt="new2" style="width:400px; height:200px;">
-            </div>
-            <div class="news-photo">
-              <img src="/Artium/assets/new3-670a05df.png" alt="new3" style="width:400px; height:200px;">
-            </div>        
+          <div class="carousel-inner">
+              <div class="carousel-item active news-photo">
+                <img src="/Artium/assets/new1-b6ec00be.png" class="d-block w-100" alt="new1">
+              </div>
+              <div class="carousel-item news-photo">
+                <img src="/Artium/assets/new2-4d2a2c04.png" class="d-block w-100" alt="new2">
+              </div>
+              <div class="carousel-item news-photo">
+                <img src="/Artium/assets/new3-670a05df.png" class="d-block w-100" alt="new3">
+              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-        </div>
-        <div id="portfolio">
+        <div id="portfolio" class="block">
           <h2>作品集</h2>
+          <div style="display:flex; justify-content:space-around">
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product18-a22c33ca.png" class="card-img-top" alt="星空#0034">
+              <div class="card-body">
+                <p class="card-text">星空 #0034</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product8-f58ab3d6.png" class="card-img-top" alt="午後#0039">
+              <div class="card-body">
+                <p class="card-text">午後 #0039</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product10-650f9c2c.png" class="card-img-top" alt="遇見艾蜜莉#0009">
+              <div class="card-body">
+                <p class="card-text">遇見艾蜜莉 #0009</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div style="display:flex; justify-content:space-around">
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product11-3c1dca90.png" class="card-img-top" alt="台北的雨#0077">
+              <div class="card-body">
+                <p class="card-text">台北的雨 #0077</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product6-4fc11f77.png" class="card-img-top" alt="轉角遇見艾蜜莉#0010">
+              <div class="card-body">
+                <p class="card-text">轉角遇見艾蜜莉 #0010</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product7-872feb44.png" class="card-img-top" alt="啟動#0004">
+              <div class="card-body">
+                <p class="card-text">啟動 #0004</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div style="display:flex; justify-content:space-around">
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product13-b1458828.png" class="card-img-top" alt="奉獻#0027">
+              <div class="card-body">
+                <p class="card-text">奉獻 #0027</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product15-36a91d3f.png" class="card-img-top" alt="卡比巴拉#0055">
+              <div class="card-body">
+                <p class="card-text">卡比巴拉 #0055</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/Artium/assets/product9-719f03de.png" class="card-img-top" alt="中秋#0003">
+              <div class="card-body">
+                <p class="card-text">中秋 #0003</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -121,7 +192,7 @@
     <footer class="footer">
     <!-- 左側裝飾圖 -->
     <div class="footer-decoration left">
-      <img src="/Artium/assets/≈-62ac81d4.svg" alt="Left Decoration" />
+      <img src="/Artium/assets/≈-e59e6f4e.svg" alt="Left Decoration" />
     </div>
   
     <!-- 中間內容容器 -->
@@ -129,7 +200,7 @@
       <div class="footer-content text-center">
         <!-- Logo -->
         <div class="footer-logo mb-3">
-          <img src="/Artium/assets/logo_footer-4d39b859.svg" alt="Artium Logo" />
+          <img src="/Artium/assets/logo_footer-c71c3dcd.svg" alt="Artium Logo" />
         </div>
   
         <!-- 版權與鏈接 -->
@@ -147,7 +218,7 @@
   
     <!-- 右側裝飾圖 -->
     <div class="footer-decoration right">
-      <img src="/Artium/assets/≈-62ac81d4.svg" alt="Right Decoration" />
+      <img src="/Artium/assets/≈-e59e6f4e.svg" alt="Right Decoration" />
     </div>
   </footer>
   
