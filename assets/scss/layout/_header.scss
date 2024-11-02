@@ -84,6 +84,23 @@
   margin-right: 30px;
 }
 
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+}
 
 .login-button {
   padding: 5px 15px;

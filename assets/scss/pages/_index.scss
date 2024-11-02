@@ -1,18 +1,18 @@
-/* Hero 區塊樣式 */
+/* 第一區塊：排行榜 ：Hero 區塊樣式 */
 .hero {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  height: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 15px;
+  justify-content: center; /* 居中對齊內容 */
+  align-items: center; /* 垂直居中 */
+  width: auto; 
+  height: 100%;
+  margin: 32px; /* 保留這行讓其居中 */
+  padding: 80px 32px; /* 左右保留32px的邊距 */
+  border-radius: 12px; /*設定元素邊框的圓角半徑*/
   overflow: hidden;
-  margin: 20px; 
+  gap: 20px; /* 增加主視覺和文字框的間距 */
 }
+
 
 /* 隱藏所有的 radio 按鈕 */
 input[type="radio"] {
@@ -46,6 +46,8 @@ input[type="radio"] {
 
 /* Artwork 表格區域樣式 */
 .artwork-table {
+  padding: 32px 48px;
+  display: flex; /* 使用 flex 讓文字垂直居中 */
   width: 40%;
   max-width: 693px; /* 使用百分比寬度，與左側圖片對齊 */
   height: 520px; /* 限制表格區域寬度 */
@@ -74,6 +76,16 @@ input[type="radio"] {
 
 .artwork-table td {
   font-size: 16px;
+}
+
+/* 排名和數字居中對齊 */
+.artwork-table td:first-child {
+  text-align: center;
+}
+
+/* 價格靠右對齊 */
+.artwork-table td:last-child {
+  text-align: right;
 }
 
 .artwork-table tbody tr {
@@ -131,6 +143,7 @@ input[type="radio"] {
 
 /* 第二區塊 */
 .marquee {
+  margin-bottom: 32px;
   height: 150px;
   overflow: hidden;
   position: relative;
@@ -157,7 +170,6 @@ input[type="radio"] {
 }
 
 /* 第三區塊 - slideshow 區塊樣式 */
-/* 為了避免全局影響，將第三區塊命名與前面重複的地方做了調整 */
 .third-slideshow * {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -318,6 +330,8 @@ input[type="radio"] {
   color: black; /* 滑過時文字變為黑色 */
 }
 
+
+
 .third-slideshow .background {
     position: absolute;
     width: 100%;
@@ -464,3 +478,96 @@ input[type="radio"] {
   height: 214px;
   z-index: 1;
 }
+
+/* 第五區塊 */
+.artist{
+  display: flex;
+  background-image: url('../assets/images/picWall/bg_2.svg'); 
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* 防止圖片超出 */
+}
+
+/* 第五區塊主要容器 */
+.art-section-custom {
+  height: 700px;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden; /* 防止元素超出範圍 */
+  z-index: 2;
+}
+
+/* 圖片區塊設定 */
+.art-section-custom .art-item {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.art-section-custom .art-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* 文字設定：居中無底色 */
+.art-section-custom .art-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1; /* 保證預設顯示 */
+}
+
+.art-section-custom .art-item:hover p {
+  bottom: 50%; /* 移到圖片中間 */
+  transform: translateY(50%);
+}
+
+/* 圖片定位與尺寸設定 */
+.art-section-custom .img-1 {
+  width: 390px;
+  height: 390px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.art-section-custom .img-2 {
+  width: 229px;
+  height: 229px;
+  top: 0;
+  left: 414px;
+  z-index: 3;
+}
+.art-section-custom .img-3 {
+  width: 151px;
+  height: 151px;
+  top: 414px;
+  left: 0;
+  z-index: 3;
+}
+.art-section-custom .img-4 {
+  width: 229px;
+  height: 229px;
+  top: 414px;
+  left: 175px;
+  z-index: 3;
+}
+.art-section-custom .img-5 {
+  width: 308px;
+  height: 308px;
+  top: 253px;
+  left: 414px;
+  z-index: 3;
+}
+
+
